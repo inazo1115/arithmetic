@@ -4,14 +4,14 @@ PASS=0
 FAIL=0
 
 function eq() {
-    expected=$1
-    actual=$2
+    actual=$1
+    expected=$2
 
-    if [ "$expected" = "$actual" ]
+    if [ "$actual" = "$expected" ]
     then
         PASS=$((PASS + 1))
     else
-        echo "fail: ${title}    expected: ${expected}    actual: ${actual}"
+        echo "fail: actual: ${actual}    expected: ${expected}"
         FAIL=$((FAIL + 1))
     fi
 }
